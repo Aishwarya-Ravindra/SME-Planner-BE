@@ -1,6 +1,6 @@
-// File: Schedule.java
 package com.accenture.sme_planner.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.sql.Timestamp;
@@ -34,6 +34,7 @@ public class Schedule {
     @Column(name = "short_description", columnDefinition = "TEXT")
     private String shortDescription;
 
+    @JsonIgnore
     @Column(name = "created_at", updatable = false)
     private java.sql.Timestamp createdAt = new java.sql.Timestamp(System.currentTimeMillis());
 
